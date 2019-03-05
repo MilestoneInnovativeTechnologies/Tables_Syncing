@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TeebTablesSyncing.exe" version="1.0.0.0" publicKeyToken="0be258e981750cd3" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TeebTablesSyncing" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TeebTablesSyncing.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="444416">
+      <assemblyIdentity name="MySql.Data" version="6.9.8.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sxxQS8SDNFfVLS+Hb6jkhcgU9s5tR9Z94FgahB+vekU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="675240">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tmdJuB4UifzY11SyrTnr4NtoE0TjkqP0nckjVkO9vQY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TeebTablesSyncing.exe" size="19432">
+      <assemblyIdentity name="TeebTablesSyncing" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iLSDire9bwXpaWT8KkPqn1Zq8smOmCUnOmOrVnAV72g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="TeebTablesSyncing.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on and is
+           is designed to work with. Uncomment the appropriate elements and Windows will 
+           automatically selected the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=MSERVER\Shareena Anoop" issuerKeyHash="90f77ddd491274396545772404a6c2a76448f6b3" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>QVaXyS6lU/5dBYGbNRKgDFFyMBx7RATTKjvBK2i99rY=</DigestValue></Reference></SignedInfo><SignatureValue>Lqw2f3A78xv3NeBz8bGaKN0l67Wznghfm13M16Ply5Z2y5HZwo9R9pilXmBAFOEjeOQcqXrzZHrMccbbj6q3t+lLc9IPSb/XtDpz7FX3/dc4te2x9RN/IoDEUf7SwecnSJA8VxdEvstzrIDO4ZZMAN6Bn+EgzMQR1cM+h2fhSQg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>8LTfFt1Hpmul0RgPIT0qZFCylsTmJj5Ln1/CVQGngC3+9yBaeaTTti2iiKVJg0rH48uLNkFcJWtDx8kVI1a6eYeg+gx5N/SVQBCcvRCKmcJX4CejFM/ShPpiDyHYnilyexdnu463WToGwwc71rOe9kCkO4YzWNZh/eR0skSfmSU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b6f6bd682bc13b2ad304447b1c3072510ca012359b81055dfe53a52ec9975641" Description="" Url=""><as:assemblyIdentity name="TeebTablesSyncing.exe" version="1.0.0.0" publicKeyToken="0be258e981750cd3" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MSERVER\Shareena Anoop</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>WXdZjRrIlIpY0+o0oMPmls1v4WxkiFdnXieXYtwhmc8=</DigestValue></Reference></SignedInfo><SignatureValue>WWoC2wNCG1fxD/yGk2/NDhpeZe7t8tW54aK5YHfEccZegfDuLaUkrLAT4J7MLlBEhTq2Vy8FUqhSroh+wCl1rr3RDIi9WZ+TKFHzWP7wZOuJjd27dBZZxNmqjA/9t9LNajYn0Zw9yDb3kNnFmx/JiyhpYujBV+Pmcz4Hloy0C6o=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>8LTfFt1Hpmul0RgPIT0qZFCylsTmJj5Ln1/CVQGngC3+9yBaeaTTti2iiKVJg0rH48uLNkFcJWtDx8kVI1a6eYeg+gx5N/SVQBCcvRCKmcJX4CejFM/ShPpiDyHYnilyexdnu463WToGwwc71rOe9kCkO4YzWNZh/eR0skSfmSU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQe3JFMuKFBIhH+mFRm1kIojANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwATQBTAEUAUgBWAEUAUgBcAFMAaABhAHIAZQBlAG4AYQAgAEEAbgBvAG8AcDAeFw0xOTAyMTEwODQxMDBaFw0yMDAyMTExNDQxMDBaMDcxNTAzBgNVBAMeLABNAFMARQBSAFYARQBSAFwAUwBoAGEAcgBlAGUAbgBhACAAQQBuAG8AbwBwMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDwtN8W3Uema6XRGA8hPSpkULKWxOYmPkufX8JVAaeALf73IFp5pNO2LaKIpUmDSsfjy4s2QVwla0PHyRUjVrp5h6D6DHk39JVAEJy9EIqZwlfgJ6MUz9KE+mIPIdieKXJ7F2e7jrdZOgbDBzvWs572QKQ7hjNY1mH95HSyRJ+ZJQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAMx9gGlVtWwhRrKDfkz4LswCSXyFUO4VfqE1YbyHcVl85vtsKUDmygWLwbIiOKgmNfUGHgOjir/NN6y1PzaSAuU/WMfwnXG3Hxm2m8kWFkRuOKL/ItxV4+CG/RANoD1z8k9o9Lnk0L043jPFDCHnPq6XG5mbYlvqTCPOX3gIt7pv</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
