@@ -73,7 +73,7 @@ namespace TeebTablesSyncing
                     {
                         var DirName = subDirectories[ini];
                         xmlSetingsFile = DirName + "\\Settings.xml";
-                        if ( DirName == xmlPath +"\\"+ "ePlus Express Edition")
+                        if ( DirName == xmlPath +"\\"+ "ePlus Standard Edition")
                         {
                             ds.Clear();
                             ds.ReadXml(xmlSetingsFile);
@@ -113,18 +113,16 @@ namespace TeebTablesSyncing
             string response = "";
             try
             {
-                Code = objEncode.Encoding("CFF3249224E04E279EC6F295B0E3266C");
-                //Code = objClsWeb.Encoding(product_id);
-                //string BaseAddress = "http://milestoneit.net/api/keycode/encode?name="+Code; 
+                Code = objEncode.Encoding("CFF3249224E04E279EC6F295B0E3266C"); 
+                //Code = objClsWeb.Encoding(product_id);  
                 string BaseAddress = "http://milestoneit.net/api/pd/interact/" + Code;
                 // Create a request using a URL that can receive a post. 
                 HttpWebRequest webreq = (HttpWebRequest)WebRequest.Create(BaseAddress);
                 webreq.Method = "GET";
                 webreq.ContentType = "Text";
-                
                 HttpWebResponse webresp = (HttpWebResponse)webreq.GetResponse();
-                // Get the stream associated with the response.
-                Stream receiveStream = webresp.GetResponseStream();
+                // Get the stream associated with the response. 
+                Stream receiveStream = webresp.GetResponseStream(); 
                 // Pipes the stream to a higher level stream reader with the required encoding format. 
                 StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
                 var encoding = ASCIIEncoding.ASCII;
@@ -141,7 +139,7 @@ namespace TeebTablesSyncing
             {
                
                 MessageBox.Show(ex.ToString());
-                }
+            }
         }
 
 
@@ -181,7 +179,7 @@ namespace TeebTablesSyncing
                 string[] RowData = Regex.Split(jSA.Replace("{", "").Replace("}", ""), ",");
                 DataRow nr = dt.NewRow();
                 foreach (string rowData in RowData)
-                {
+                { 
                     try
                     {
                         int idx = rowData.IndexOf(":");
@@ -198,9 +196,7 @@ namespace TeebTablesSyncing
             }
             return dt;
         }
-
         
-
         public DataTable GetDataTableFromJsonString(string json)
         {
             var jsonLinq = JObject.Parse(json);
@@ -231,7 +227,7 @@ namespace TeebTablesSyncing
        */
 
         private DataTable GetTableData(string qury)
-        {
+         {
             DataTable dt = new DataTable();
             try
             {
@@ -372,7 +368,8 @@ namespace TeebTablesSyncing
         {
             try
             {
-                DataTable dtLatestModifiedDates = GetTableData(("SELECT DATE_FORMAT(MAX(MODIFIED_DATE),'%Y-%m-%d %T') AS Modified_Date  FROM " + tableName + " WHERE MODIFIED_USER IS NOT NULL").ToString());
+                //DataTable dtLatestModifiedDates = GetTableData(("SELECT DATE_FORMAT(MAX(MODIFIED_DATE),'%Y-%m-%d %T') AS Modified_Date  FROM " + tableName + " WHERE MODIFIED_USER IS NOT NULL").ToString());
+                DataTable dtLatestModifiedDates = GetTableData(string.Format("SELECT DATE_FORMAT(MAX(MODIFIED_DATE),'%Y-%m-%d %T') AS Modified_Date  FROM " + tableName + " WHERE MODIFIED_USER IS NOT NULL"));
                 LastModifiedDate = dtLatestModifiedDates.Rows[0]["Modified_Date"].ToString();
                 DataTable dtLatestCreatedDate = GetTableData(string.Format("SELECT DATE_FORMAT(MAX(CREATED_DATE),'%Y-%m-%d %T') AS Created_Date  FROM " + tableName + " WHERE MODIFIED_USER IS NULL"));
                 LastCreatedDate = dtLatestCreatedDate.Rows[0]["Created_Date"].ToString();
@@ -399,7 +396,7 @@ namespace TeebTablesSyncing
                     }
                     Ctbl++;
                 }
-                
+                  
             }
             catch (Exception ex)
             {
@@ -417,8 +414,11 @@ namespace TeebTablesSyncing
             ArrayList Primary = new ArrayList();
             dtPrimaryKey = GetTableData(string.Format("SHOW KEYS FROM " + tableName + " WHERE KEY_NAME = 'PRIMARY'"));// Getting primarykeys from the tables
 
-            if (LastCreatedDate==string.Empty||LastModifiedDate==string.Empty)
-            {
+
+            //if (LastCreatedDate == " " || LastModifiedDate == " ")
+                if (LastCreatedDate == String.Empty || LastModifiedDate == String.Empty)
+                //if (string.IsNullOrEmpty(LastCreatedDate)||string.IsNullOrEmpty(LastModifiedDate))
+                {
                 dtCratedData = GetTableData(string.Format("SELECT * FROM " + tableName));
             }
             else
@@ -434,7 +434,7 @@ namespace TeebTablesSyncing
             if (dtUpdatedData.Rows.Count > 0)
             {
                 int co = dtUpdatedData.Rows.Count;
-                mode = "update";
+                mode = "update";  
                 UpdatedItem.Add(new ItemMasterInfo
                 {
                     table = tableName,

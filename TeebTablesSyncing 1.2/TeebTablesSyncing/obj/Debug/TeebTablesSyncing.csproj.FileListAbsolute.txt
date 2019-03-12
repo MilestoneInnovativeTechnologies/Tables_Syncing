@@ -86,3 +86,6 @@ D:\Milestone Toolkit\vishnu\Project\TablesSyncing\TeebTablesSyncing 1.1\TeebTabl
 D:\Milestone Toolkit\vishnu\Project\TablesSyncing\TeebTablesSyncing 1.1\TeebTablesSyncing\obj\Debug\TeebTablesSyncing.TrustInfo.xml
 D:\Milestone Toolkit\vishnu\Project\TablesSyncing\TeebTablesSyncing 1.1\TeebTablesSyncing\obj\Debug\TeebTablesSyncing.exe.manifest
 D:\Milestone Toolkit\vishnu\Project\TablesSyncing\TeebTablesSyncing 1.1\TeebTablesSyncing\obj\Debug\TeebTablesSyncing.application
+D:\Milestone Toolkit\vishnu\Project\TablesSyncing\TeebTablesSyncing 1.2\TeebTablesSyncing\bin\Debug\TeebTablesSyncing.exe.config
+D:\Milestone Toolkit\vishnu\Project\TablesSyncing\TeebTablesSyncing 1.2\TeebTablesSyncing\obj\Debug\TeebTablesSyncing.exe
+D:\Milestone Toolkit\vishnu\Project\TablesSyncing\TeebTablesSyncing 1.2\TeebTablesSyncing\obj\Debug\TeebTablesSyncing.pdb
